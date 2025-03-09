@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #ec4899;
+  --secondary-dark: #db2777;
+  --bg-light: #f9fafb;
+  --text-dark: #1f2937;
+  --text-light: #f9fafb;
+  --gray-light: #e5e7eb;
+  --gray-medium: #9ca3af;
+  --gray-dark: #4b5563;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Custom utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.btn-primary {
+  @apply bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300;
+}
+
+.btn-secondary {
+  @apply bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-md transition duration-300;
+}
+
+.btn-outline {
+  @apply border border-indigo-500 text-indigo-500 hover:bg-indigo-50 font-semibold py-2 px-4 rounded-md transition duration-300;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden border border-gray-100;
+}
+
+.section {
+  @apply py-12 md:py-20;
+}
+
+/* Animation for waveform */
+.waveform {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waveform-bar {
+  background-color: var(--primary);
+  width: 4px;
+  margin: 0 2px;
+  border-radius: 2px;
+  animation: sound 1.2s ease-in-out infinite;
+}
+
+@keyframes sound {
+  0% {
+    height: 10px;
+  }
+  50% {
+    height: 40px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+
+.waveform-bar:nth-child(1) { animation-delay: 0.2s; }
+.waveform-bar:nth-child(2) { animation-delay: 0.4s; }
+.waveform-bar:nth-child(3) { animation-delay: 0.6s; }
+.waveform-bar:nth-child(4) { animation-delay: 0.8s; }
+.waveform-bar:nth-child(5) { animation-delay: 1.0s; }
+.waveform-bar:nth-child(6) { animation-delay: 0.5s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-dark);
+}
