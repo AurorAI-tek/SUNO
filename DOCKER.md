@@ -37,7 +37,7 @@ docker-compose down
 
 In development mode:
 
-- Frontend is available at `http://localhost:3000`
+- Frontend is available at `http://localhost:3001`
 - Backend is available at `http://localhost:5000`
 - Code changes will automatically trigger rebuilds (hot-reloading)
 
@@ -59,7 +59,7 @@ docker-compose down
 
 In production mode:
 
-- Frontend is available at `http://localhost:3000` (served by Nginx)
+- Frontend is available at `http://localhost:3001` (served by Nginx)
 - Backend is available at `http://localhost:5000`
 - API requests from the frontend to the backend are proxied through Nginx
 

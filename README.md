@@ -118,7 +118,7 @@ A full-stack web application designed to help users explore and utilize Suno's m
    docker-compose up --build -d
    ```
 
-4. Open your browser and navigate to [`http://localhost:3000`](http://localhost:3000)
+4. Open your browser and navigate to [`http://localhost:3001`](http://localhost:3001)
 
 For detailed Docker instructions, see [DOCKER.md](DOCKER.md)
 
@@ -205,7 +205,7 @@ For production deployment with Docker:
    docker-compose up --build -d
    ```
 
-3. Your application will be available at `http://your-server-ip:3000`
+3. Your application will be available at `http://your-server-ip:3001`
 
 For more detailed Docker deployment options, refer to [DOCKER.md](DOCKER.md)
 
